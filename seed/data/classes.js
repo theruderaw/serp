@@ -1,0 +1,32 @@
+export default [
+    {
+        school: 'school-1',
+        teacher: 'teacher_001@example.com',
+        name: 'Class-10',
+        section: 'A',
+        grade: 10,
+        studentcount: 10,
+        capacity: 40,
+        stream: 'Science',
+    },
+    {
+        school: 'school-2',
+        teacher: 'teacher_002@example.com',
+        name: 'Class-9',
+        section: 'B',
+        grade: 9,
+        studentcount: 10,
+        capacity: 35,
+        stream: 'Commerce',
+    },
+    {
+        school: 'school-3',
+        teacher: 'teacher_003@example.com',
+        name: 'Class-8',
+        section: 'A',
+        grade: 8,
+        studentcount: 10,
+        capacity: 30,
+        stream: 'None',
+    },
+];
