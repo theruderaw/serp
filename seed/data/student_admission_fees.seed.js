@@ -1,4 +1,4 @@
-const fees = Array.from({ length: 10 }, (_, i) => ({
+const fees = Array.from({ length: 20 }, (_, i) => ({
     student: `STU${String(i + 1).padStart(3, '0')}`,
 
     admissionfee: "25000",

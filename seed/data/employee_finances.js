@@ -1,5 +1,5 @@
-const finance = Array.from({ length: 10 }, (_, i) => ({
-    employee: `teacher_${String(i + 1).padStart(3, '0')}@example.com`,
+const finance = Array.from({ length: 4 }, (_, i) => ({
+    employee: `teacher_${String(i + 1)}@example.com`,
 
     salary: 30000 + (i * 2000),
 

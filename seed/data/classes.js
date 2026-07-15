@@ -1,7 +1,7 @@
 export default [
     {
         school: 'school-1',
-        teacher: 'teacher_001@example.com',
+        teacher: 'teacher_1@example.com',
         name: 'Class-10',
         section: 'A',
         grade: 10,
@@ -10,8 +10,8 @@ export default [
         stream: 'Science',
     },
     {
-        school: 'school-2',
-        teacher: 'teacher_002@example.com',
+        school: 'school-1',
+        teacher: 'teacher_2@example.com',
         name: 'Class-9',
         section: 'B',
         grade: 9,
@@ -20,8 +20,8 @@ export default [
         stream: 'Commerce',
     },
     {
-        school: 'school-3',
-        teacher: 'teacher_003@example.com',
+        school: 'school-1',
+        teacher: 'teacher_3@example.com',
         name: 'Class-8',
         section: 'A',
         grade: 8,

@@ -1,4 +1,4 @@
-const contacts = Array.from({ length: 10 }, (_, i) => ({
+const contacts = Array.from({ length: 20 }, (_, i) => ({
     student: `STU${String(i + 1).padStart(3, '0')}`,
 
     phone: `90001000${i + 1}`,

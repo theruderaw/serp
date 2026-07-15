@@ -5,12 +5,12 @@ export default [
         is_active: true,
     },
     {
-        school: 'school-2',
+        school: 'school-1',
         module: 'module-employees',
         is_active: true,
     },
     {
-        school: 'school-3',
+        school: 'school-1',
         module: 'module-academics',
         is_active: false,
     },

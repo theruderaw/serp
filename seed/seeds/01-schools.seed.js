@@ -1,9 +1,6 @@
-import schools from '../data/school.js';
+import school from '../data/school.js';
 
 export async function seedSchools(client, ctx) {
-    ctx.schools = [];
-    ctx.school = {};
-
     const sql = `
         INSERT INTO schools (
             name,
@@ -29,31 +26,26 @@ export async function seedSchools(client, ctx) {
         RETURNING *;
     `;
 
-    for (const school of schools) {
-        const { rows } = await client.query(sql, [
-            school.name,
-            school.slug,
-            school.logo,
-            school.contact_email,
-            school.status,
-            school.plan,
-            JSON.stringify(school.features),
-            school.theme,
-            school.login_background,
-            school.joined_date,
-            school.academic_year,
-            JSON.stringify(school.working_days),
-            school.address,
-            school.phone,
-            school.established,
-            school.website,
-        ]);
+    const { rows } = await client.query(sql, [
+        school.name,
+        school.slug,
+        school.logo,
+        school.contact_email,
+        school.status,
+        school.plan,
+        JSON.stringify(school.features),
+        school.theme,
+        school.login_background,
+        school.joined_date,
+        school.academic_year,
+        JSON.stringify(school.working_days),
+        school.address,
+        school.phone,
+        school.established,
+        school.website,
+    ]);
 
-        const created = rows[0];
+    ctx.school = rows[0];
 
-        ctx.schools.push(created);
-        ctx.school[created.slug] = created;
-    }
-
-    console.log(`✓ Seeded ${ctx.schools.length} schools`);
+    console.log(`✓ Seeded school: ${ctx.school.name}`);
 }

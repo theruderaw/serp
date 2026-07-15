@@ -1,35 +1,31 @@
-const schools = [
-    'school-1',
-    'school-2',
-    'school-3',
-];
+const school = 'school-1';
 
-const employees = Array.from({ length: 10 }, (_, i) => ({
+const employees = Array.from({ length: 4 }, (_, i) => ({
     role: 'employee',
-    school: schools[i % 3],
+    school,
     name: `Teacher-${i + 1}`,
-    email: `teacher_${String(i + 1).padStart(3, '0')}@example.com`,
-    password: 'employee123',
+    email: `teacher_${i + 1}@example.com`,
+    password: `teacher${i + 1}`,
     avatar: null,
     is_active: true,
 }));
 
-const students = Array.from({ length: 10 }, (_, i) => ({
+const students = Array.from({ length: 20 }, (_, i) => ({
     role: 'student',
-    school: schools[i % 3],
+    school,
     name: `Student-${i + 1}`,
-    email: `student_${String(i + 1).padStart(3, '0')}@example.com`,
-    password: 'student123',
+    email: `student_${i + 1}@example.com`,
+    password: `student${i + 1}`,
     avatar: null,
     is_active: true,
 }));
 
-const schoolAdmins = schools.map((school, i) => ({
+const schoolAdmins = Array.from({ length: 2 }, (_, i) => ({
     role: 'school_admin',
     school,
     name: `School-Admin-${i + 1}`,
     email: `school_admin_${i + 1}@example.com`,
-    password: 'school_admin123',
+    password: 'school123',
     avatar: null,
     is_active: true,
 }));
@@ -40,7 +36,7 @@ export default [
         school: null,
         name: 'Super-Admin',
         email: 'super_admin@example.com',
-        password: 'super_admin123',
+        password: 'admin123',
         avatar: null,
         is_active: true,
     },

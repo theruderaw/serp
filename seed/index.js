@@ -19,6 +19,7 @@ import { seedStudentHostel } from './seeds/15-student_hostels.seed.js';
 import { seedStudentAdmissionFees } from './seeds/16-student_admission_fees.seed.js';
 import { seedEmployeeFinance } from './seeds/17-employee_finances.seed.js';
 import { seedSchoolSettings } from './seeds/18-school_settings.seed.js';
+import { seedSubscriptionPayments } from './seeds/19-subscription_payments.seed.js';
 
 dotenv.config();
 
@@ -47,6 +48,7 @@ async function seed() {
         await seedStudentAdmissionFees(client,ctx);
         await seedEmployeeFinance(client,ctx)
         await seedSchoolSettings(client,ctx)
+        await seedSubscriptionPayments(client,ctx)
 
         await client.query('COMMIT');
 

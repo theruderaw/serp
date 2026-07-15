@@ -1,5 +1,5 @@
-const addresses = Array.from({ length: 10 }, (_, i) => ({
-    student: `STU${String(i + 1).padStart(3, '0')}`,
+const addresses = Array.from({ length: 20 }, (_, i) => ({
+    student: `STU${String(i + 1).padStart(3,'0')}`,
 
     address: `House ${i + 1}, Main Road`,
     permanentaddress: `Permanent Address ${i + 1}`,

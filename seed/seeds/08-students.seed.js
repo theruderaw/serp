@@ -50,7 +50,7 @@ export async function seedStudents(client, ctx) {
                 ? ctx.class[student.class].id
                 : null,
 
-            ctx.school[student.school].id,
+            ctx.school.id,
 
             student.stream,
 

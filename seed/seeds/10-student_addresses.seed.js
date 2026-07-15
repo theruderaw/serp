@@ -18,6 +18,7 @@ export async function seedStudentAddresses(client, ctx) {
         )
         RETURNING *;
     `;
+    console.log(ctx.student)
 
     for (const address of addresses) {
         const { rows } = await client.query(sql, [

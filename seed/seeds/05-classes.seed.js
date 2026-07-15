@@ -18,14 +18,20 @@ export async function seedClasses(client, ctx) {
         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
         RETURNING *;
     `;
+    console.log(ctx.user)
 
     for (const cls of classes) {
         const { rows } = await client.query(sql, [
-            ctx.school[cls.school].id,
+            ctx.school.id,
+
             cls.name,
             cls.section,
             cls.grade,
-            cls.teacher ? ctx.user[cls.teacher].id : null,
+
+            cls.teacher
+                ? ctx.user[cls.teacher].id
+                : null,
+
             cls.studentcount,
             cls.capacity,
             cls.stream,
@@ -34,7 +40,7 @@ export async function seedClasses(client, ctx) {
         const created = rows[0];
 
         ctx.classes.push(created);
-        ctx.class[`${cls.school}:${cls.grade}:${cls.section}`] = created;
+        ctx.class[`${cls.grade}:${cls.section}`] = created;
     }
 
     console.log(`✓ Seeded ${ctx.classes.length} classes`);

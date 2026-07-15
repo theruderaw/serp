@@ -16,7 +16,7 @@ export async function seedSchoolModules(client, ctx) {
     
     for (const item of schoolModules) {
         const { rows } = await client.query(sql, [
-            ctx.school[item.school].id,
+            ctx.school.id,
             ctx.module[item.module].id,
             item.is_active,
         ]);

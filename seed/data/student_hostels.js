@@ -1,4 +1,4 @@
-const hostels = Array.from({ length: 10 }, (_, i) => ({
+const hostels = Array.from({ length: 20 }, (_, i) => ({
     student: `STU${String(i + 1).padStart(3, '0')}`,
 
     name: i % 3 === 0 ? `Hostel-${(i % 3) + 1}` : null,

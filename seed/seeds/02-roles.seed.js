@@ -1,4 +1,4 @@
-import roles from '../roles.js';
+import roles from '../data/roles.js';
 
 export async function seedRoles(client, ctx) {
     ctx.roles = [];

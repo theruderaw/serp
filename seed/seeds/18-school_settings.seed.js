@@ -15,7 +15,7 @@ export async function seedSchoolSettings(client, ctx) {
 
     for (const setting of schoolSettings) {
         const { rows } = await client.query(sql, [
-            ctx.school[setting.school].id,
+            ctx.school.id,
             setting.setting_key,
             setting.setting_value,
         ]);

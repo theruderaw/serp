@@ -43,10 +43,12 @@ export async function seedEmployees(client, ctx) {
         RETURNING *;
     `;
 
+    console.log(ctx.school)
+
     for (const employee of employees) {
         const { rows } = await client.query(sql, [
             ctx.user[employee.user].id,
-            ctx.school[employee.school].id,
+            ctx.school.id,
 
             employee.registration_no,
 
